@@ -5,6 +5,7 @@
 		"@rollup/plugin-commonjs": "^28.0.1",
 		"@rollup/plugin-node-resolve": "^15.3.0",
 		"@rollup/plugin-terser": "^0.4.4",
+		"gh-pages": "^6.3.0",
 		"rollup": "^4.28.1",
 		"serve": "^14.2.4"
 	},
@@ -12,6 +13,8 @@
 		"build": "rollup -c",
 		"watch": "rollup -c -w",
 		"init-server": "serve public",
-		"dev": "start npm run watch && start npm run init-server"
+		"dev": "start npm run watch && start npm run init-server",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist" 
 	}
 }
